@@ -1,5 +1,8 @@
 import React from "react";
-// import Notification from "../../img/notification.svg"
+import SettingsIcon from '@mui/icons-material/Settings';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import EmailIcon from '@mui/icons-material/Email';
+
 
 function Navbar() {
   return (
@@ -7,15 +10,15 @@ function Navbar() {
       <span className="logo">App</span>
       <div className="icons">
         <div className="icon">
-            <img src="../../img/notification.svg" className="iconImg" alt="" />
+            <NotificationsIcon />
             <div className="counter">1</div>
         </div>
         <div className="icon">
-            <img src="../../img/message.svg" className="iconImg" alt="" />
+            <EmailIcon />
             <div className="counter">1</div>
         </div>
         <div className="icon">
-            <img src="../../img/settings.svg" className="iconImg" alt="" />
+            <SettingsIcon />
             <div className="counter">1</div>
         </div>
       </div>
