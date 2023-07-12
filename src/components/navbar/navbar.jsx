@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SettingsIcon from '@mui/icons-material/Settings';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import EmailIcon from '@mui/icons-material/Email';
 
 
-function Navbar() {
+function Navbar({socket}) {
+
+    const[notifications,setNotifications] = useState([])
+
+    useEffect(() => {
+        socket.on("getNotification",(data) => {
+            setNotifications((prev) => [...prev,data])
+        })
+    },[socket])
+
+    console.log(notifications)
+
   return (
     <div className="navbar">
       <span className="logo">App</span>
