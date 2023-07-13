@@ -41,8 +41,8 @@ function Navbar({socket}) {
       <span className="logo">App</span>
       <div className="icons">
         <div className="icon" onClick={() => {
-            setOpen(!open)
-            {open && setNotifications([])}}}>
+            setOpen(!open);
+            !open && setNotifications([])}}>
             <NotificationsIcon />
             {notifications.length > 0 && <div className="counter">{notifications.length}</div>}
         </div>
