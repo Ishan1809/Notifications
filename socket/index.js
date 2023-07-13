@@ -22,7 +22,7 @@ const io = new Server({
 io.on("connection", (socket) => {
   socket.on("newuser",username => {
     addnewuser(username,socket.id)
-  })
+  });
 
   socket.on("sendNotification",({senderName,receiverName,type}) => {
     const receiver = getuser(receiverName);
@@ -33,7 +33,7 @@ io.on("connection", (socket) => {
   })
 
   socket.on("disconnect", () =>{
-    removeuser(socket.id)
+    removeuser(socket.id);
   })
 });
 

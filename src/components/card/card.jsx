@@ -34,7 +34,7 @@ function Card({post ,socket ,user}) {
             </div>
             <img src={post.postImg} alt="" className="postImg" />
             <div className="interaction">
-                { isLike ? (<FavoriteRoundedIcon className="cardIcon heart" onClick={() => handleLike(4)} color="error" />) : (<FavoriteBorderIcon className="cardIcon heart" onClick={() => handleLike(1)} / >)}
+                { isLike ? (<FavoriteRoundedIcon className="cardIcon heart" onClick={() => setLike(!isLike)} color="error" />) : (<FavoriteBorderIcon className="cardIcon heart" onClick={() => handleLike(1)} / >)}
                 <ChatBubbleOutlineOutlinedIcon className="cardIcon" onClick={() => handleNot(2)} />
                 <ShareIcon className="cardIcon heart" onClick={() => handleNot(3)} />
                 <InfoOutlinedIcon className="cardIcon infoIcon heart"/>
